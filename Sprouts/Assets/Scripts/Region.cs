@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Region
 {
-    private List<Boundary> boundaries;
+    public List<Boundary> boundaries {  get; private set; }
 
     public Region(List<Boundary> boundaries)
     {

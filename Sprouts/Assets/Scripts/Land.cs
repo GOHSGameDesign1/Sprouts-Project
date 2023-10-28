@@ -8,10 +8,12 @@ using UnityEngine;
 */
 public class Land 
 {
-    private List<Region> regions;
+    public List<Region> regions { get; private set; }
 
     public Land(List<Region> regions) 
     { 
         this.regions = regions;
     }
+
+
 }
