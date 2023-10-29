@@ -8,5 +8,9 @@ using UnityEngine;
  */
 public class Spot 
 {
-
+    public char stringChar;
+    public Spot(char stringChar)
+    {
+        this.stringChar = stringChar;
+    }
 }

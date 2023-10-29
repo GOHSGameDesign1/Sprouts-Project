@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boundary
 {
-    private List<Spot> spots;
+    public List<Spot> spots { get; private set; }
 
     public Boundary(List<Spot> spots)
     {
