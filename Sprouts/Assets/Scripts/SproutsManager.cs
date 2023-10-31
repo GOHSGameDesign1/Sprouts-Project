@@ -20,6 +20,7 @@ public class SproutsManager : MonoBehaviour
     char[] SPOT_CHARS = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 
     List<Land> _lands = new List<Land>();
+    List<Spot> _spots = new List<Spot>();
     string stringRep; 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,11 @@ public class SproutsManager : MonoBehaviour
         List<Boundary> boundaries = new List<Boundary>();
         for(int i = 0; i < numSpots; i++)
         {
-            List<Spot> tempSpotList = new List<Spot>() { new Spot(SPOT_CHARS[i]) };
+            Spot tempSpot = new Spot(SPOT_CHARS[i]);
+            // tempSpot.stringChar = '0';
+            List<Spot> tempSpotList = new List<Spot>() { tempSpot };
+            _spots.Add(tempSpot);
+
             boundaries.Add(new Boundary(tempSpotList));
         }
         regions.Add(new Region(boundaries));
