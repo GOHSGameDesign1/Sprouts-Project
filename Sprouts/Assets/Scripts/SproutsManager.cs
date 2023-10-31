@@ -26,7 +26,7 @@ public class SproutsManager : MonoBehaviour
     {
         CreateEmptyPosition(3);
         Debug.Log("Lands: " + _lands.Count() + ".  Regions: " + _lands[0].regions.Count() + ".  Boundaries: " + _lands[0].regions[0].boundaries.Count());
-        Debug.Log("\n" + CreateEmptyString());
+        Debug.Log("\n" + StringFromStructured());
     }
 
     public void CreateEmptyPosition(int numSpots)
@@ -43,8 +43,8 @@ public class SproutsManager : MonoBehaviour
         _lands.Add(new Land(regions));
     }
 
-    // Creates starting string
-    private string CreateEmptyString()
+    // Returns string from structured position
+    private string StringFromStructured()
     {
         string result = null;
 
